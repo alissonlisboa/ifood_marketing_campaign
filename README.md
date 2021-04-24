@@ -1,4 +1,9 @@
-# iFood Marketing Campaign
+# iFood MARKETING CAMPAIGN
+
+## Predicting customers that will by a gadget.
+<br>
+
+![iFood](./img/ifood.png)
 
 ## This projets has a gol to maximize the results of a marketing campaign and generate value to the company.
 
@@ -44,10 +49,10 @@ gadget.
 
 # 2. Business Assumptions.
 The assumptions about the business problem is as follows:
- * 
- *
- *
- *
+ 
+ * The cause number 1 of the money loss is don't know wich custumer will buy the gadget before a call.
+ * The gadget to be sold meets customer expectations.
+
 
 # 3. Solution Strategy
 
@@ -73,32 +78,66 @@ My strategy to solve this challenge was:
 
 **Step 10. Deploy Modelo to Production:** Publish the model in a cloud environment so that other people or services can use the results to improve the business decision.
 
+
 # 4. Top 3 Data Insights
 
-**Hypothesis 01:**
+**Hypothesis 01:** Customer that buy more Gold products should accept the gadget.
+<br>
+**False** - Customers that buy more Gold Products tend not accept the gadget
 
-**True/False.**
+**Hypothesis 02:** Customers with lower age tend age accept the gadget.
+<br>
+**False** - Custumers with average age accept more the gadget
 
-**Hypothesis 02:**
+**Hypothesis 03:** Customers with lower age buy more.
+<br>
+**False** - Median age customer buy more.
 
-**True/False.**
-
-**Hypothesis 03:**
-
-**True/False.**
 
 # 5. Machine Learning Model Applied
 
+The models applied was Random Forest Classifier and XGBoost Classifier
+
+
 # 6. Machine Learning Model Performance
+
+The summary below shows the metrics comparison after running a cross validation score with stratified K-Fold with 5 splits in the full data set.
+
+| model_name             | final_score |
+| :--------------------- | ----------- |
+| RandonForestClassifier | 0.890179    |
+| XGBClassifier          | 0.890625    |
+
 
 # 7. Business Results
 
+The given data didn't contain a test data set, so that I have used the training dataset to get de business estimates as follow:
+
+
+| net_profit_before  | net_profit_after |
+| ------------------ |----------------- |
+| -3046.0 MU         |2527.0 MU         |
+
+
 # 8. Conclusions
+
+Predicting the customer that probably won't accept the gadget, we can call only those that will accept.
+
+Doing so, I estimate to revert a loss of **3,000 MU** to a profit about **2,500 MU**.
+
 
 # 9. Lessons Learned
 
+* Understand the dataset and obtain insights from it are crucial for the project success.
+* The models must be trained with as much data as possible.
+* The appropriate metric to evaluate the best model must be determined according to the goal of the project / business.
+* Sometimes is better reduce the number of features in order to simplify the model and improve the result.
+
 # 10. Next Steps to Improve
 
-# LICENSE
-
-# All Rights Reserved - Comunidade DS 2021
+* **Develop an app** that intakes a portfolio of customers and assigns for each customer its respective label of buying a new gadget.
+* Talk to the **business team** to check if there is **more relevant features**
+* Create **new hypothesis** about the problem
+* Apply other algorithms
+* Improve Hyperparameter fine tuning techniques
+* Build a model **retraining pipeline.**
