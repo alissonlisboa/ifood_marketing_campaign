@@ -119,6 +119,16 @@ The given data didn't contain a test data set, so that I have used the training 
 | -3046.0 MU         |2527.0 MU         |
 
 
+The customers can be divided in two groups, according to the total number of purchases and total expent, with average data as follows:
+
+|label |income       |recency   |mnt_total   |complain|num_total_purchases  |accepted_total |household_people |age       |days_since_enrolled |count |
+|-----:|------------:|---------:|-----------:|--------:|-------------------:|--------------:|----------------:|---------:|-------------------:|-----:|
+|0     |69752.303518 |49.341709 |1704.166834 |0.008040 |19.465327           |0.554774       |1.249246         |54.203015 |2872.261307         |995   |
+|1     |37746.376305 |48.923695 |195.621687  |0.010442 |7.000000            |0.092369       |1.871486         |50.588755 |2827.858635         |1245  |
+
+This division allows the marketing team to better understand the customer segmentation and take diferent actions on it.
+
+
 # 8. Conclusions
 
 Predicting the customer that probably won't accept the gadget, we can call only those that will accept.
